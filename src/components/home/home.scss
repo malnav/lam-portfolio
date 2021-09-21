@@ -62,6 +62,8 @@ body[data-theme="theme4"]{
 .social{
     grid-area: social;
     background-color: var(--secondary-color);
+    animation: fadeIn 1s;
+    
     // display: flex;
     // justify-content: center;
     // align-items: center;
@@ -77,15 +79,16 @@ body[data-theme="theme4"]{
 
     ul>li{
         font-weight: bold;
+        transition: transform 1s linear;
 
         a{
             text-decoration: none;
             color: initial;
-            transition: font-size ease-in 0.1s ;
+            
         }
-        a:hover{
-            font-size: 20px;
-        }
+    }
+    ul>li:hover{
+        transform: scale(2);
     }
    
 }
@@ -153,6 +156,63 @@ body[data-theme="theme4"]{
     
 }
 
+@keyframes fadeInHalf {
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+    
+}
+
+@keyframes fadeIn {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+    
+}
+
+@keyframes fadeInLeft {
+    0%{
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0%);
+    }
+    
+}
+@keyframes fadeInRight {
+    0%{
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0%);
+    }
+    
+}
+
+@keyframes fadeInBottom {
+    0%{
+        opacity: 0;
+        transform: translateY(10%);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0%);
+    }
+    
+}
 .name{
     background-color: var(--primary-color);
     grid-area: name;
@@ -161,13 +221,14 @@ body[data-theme="theme4"]{
     justify-content: flex-end;
     padding-bottom: 70px;
     line-height: 0.9;
+    animation: fadeIn 2s;
     
-    
-    
+
     p{
         margin-left: -50px;
         font-size: 130px;
         font-family: 'Bungee Outline', cursive;
+        animation: fadeInLeft 2s;
         
     }
 
@@ -181,8 +242,7 @@ body[data-theme="theme4"]{
     background-color: var(--secondary-color);
     position: relative;
     z-index: -1;
-
-   
+    animation: fadeIn 1s;
 
     &__top{
         height: 80%;
@@ -193,6 +253,7 @@ body[data-theme="theme4"]{
         
         background-color: var(--primary-color);
         height: 20%;
+        animation: fadeIn 2s;
 
         img{
             height: 100%;
@@ -202,7 +263,7 @@ body[data-theme="theme4"]{
             margin-right: auto;
             left: 0;
             right: 0;
-
+            // animation: fadeInBottom 4s;
             
         }
     }
@@ -217,20 +278,26 @@ body[data-theme="theme4"]{
     // padding-right: 150px;
     row-gap: 15px;
     padding-bottom: 150px;
+    animation: fadeIn 1s;
     
    
-    h1, p,li{
+    h1, p,a{
         margin-left: -30px;
         z-index: 1;
         width: 100%;
         max-width: 80%;
-        
+        animation: fadeInRight 2s;
     }
 
-    ul>li{
-        border-bottom: solid;
-        padding-bottom: 7px;
-        border-width:medium;
+    a{
+        text-decoration-line: underline;
+        text-underline-offset: 7px;
+        text-decoration-thickness: 2px;
+        //border-bottom: solid;
+        //border-width:medium;
+        //padding-bottom: 7px;
+        //animation: fadeInRight 2s;
+        //width: 18%;
         
     }
 }
@@ -243,6 +310,7 @@ body[data-theme="theme4"]{
         width: 13%;
         background-color: var(--primary-color);
         height: 100%;
+        animation: fadeIn 2s;
     }
     
     ul{

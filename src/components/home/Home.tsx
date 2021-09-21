@@ -98,7 +98,7 @@ const Home = () => {
                     <p>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum ex expedita harum quae, eaque sunt qui deserunt amet, vero asperiores, animi iste! Aspernatur distinctio, minus nobis ab dolorem quae voluptatum.
                     </p>
-                    <ul><li>Learn more</li></ul>
+                    <a>Learn more</a>
                 </div>
                 <div className="links">
                     <div></div>
